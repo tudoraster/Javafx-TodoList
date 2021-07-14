@@ -1,0 +1,42 @@
+.text-area {
+    -fx-background-color: #202225;
+    -fx-text-fill: #fffaf3;
+}
+
+.list-view {
+    -fx-background-color: #2f3136;
+    -fx-selection-bar: #36393f;
+    -fx-selection-bar-non-focused: #36393f;
+}
+
+.text-area .content{
+    -fx-background-color: #36393f;
+    -fx-border-style: solid;
+    -fx-border-color: #36393f;
+    -fx-border-width: 1;
+}
+
+.text-area .scroll-bar:vertical {
+    -fx-pref-width: 1;
+    -fx-opacity: 0;
+}
+.text-area .scroll-bar:horizontal {
+    -fx-pref-height: 1;
+    -fx-opacity: 0;
+}
+
+.menu-bar {
+    -fx-background-color: #202225;
+}
+
+.menu .label{
+    -fx-text-fill: #fffaf3;
+    -fx-font-size: 16;
+    -fx-font-family: "Roboto Light";
+}
+
+.menu-item .label{
+    -fx-text-fill: #202225;
+    -fx-font-size: 15;
+    -fx-font-family: "Roboto Light";
+}

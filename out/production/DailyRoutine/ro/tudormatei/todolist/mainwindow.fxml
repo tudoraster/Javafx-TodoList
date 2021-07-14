@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="mainBorderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: -fx-border-style: solid;    -fx-border-color:  #202225;    -fx-border-width: 1;;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.tudormatei.todolist.Controller">
+   <left>
+      <ListView id="list" fx:id="todoListView" prefHeight="400.0" prefWidth="298.0" style="-fx-background-color: #2f3136; -fx-padding: 0; -fx-background-insets: 0;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="5.0" left="1.0" right="5.0" />
+         </padding></ListView>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #202225;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea id="text-area" fx:id="itemDescription" editable="false" prefHeight="312.0" prefWidth="257.0" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="Roboto Light" size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></TextArea>
+            <HBox id="hour" alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="302.0" style="-fx-background-color: #36393f;" stylesheets="@style.css" VBox.vgrow="SOMETIMES">
+               <children>
+                  <Label text="Hours left: " textAlignment="CENTER" textFill="#fffaf3" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Roboto Light" size="24.0" />
+                     </font></Label>
+                  <Label fx:id="timeLeft" text="24" textFill="#fffaf3">
+                     <font>
+                        <Font name="Roboto Light" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar id="menu-bar" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu" mnemonicParsing="false" text="Todo List">
+            <items>
+                <MenuItem id="menu-item" mnemonicParsing="false" onAction="#showNewItemDialog" text="New Item" />
+                  <MenuItem id="menu-item" mnemonicParsing="false" onAction="#removeCurrentItem" text="Remove Item" />
+                <MenuItem id="menu-item" mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <Pane prefHeight="370.0" prefWidth="79.0" style="-fx-background-color: #2f3136;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
